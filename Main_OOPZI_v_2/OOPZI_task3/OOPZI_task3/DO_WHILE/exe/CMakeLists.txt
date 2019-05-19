@@ -3,6 +3,6 @@
 #
 
 # Добавьте источник в исполняемый файл этого проекта.
-add_executable (exe2 "MAIN.c")
-target_link_libraries(exe2 tlib2)
+add_executable (task3_doWHILE "MAIN.c")
+target_link_libraries(task3_doWHILE task3_doWHILEtlib2)
 # TODO: Добавьте тесты и целевые объекты, если это необходимо.

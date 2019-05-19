@@ -3,19 +3,6 @@
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	Ochered_na_osnove_massiva sm;
-	cout << "!!!!" << endl;
-	sm.Push(11);
-	sm.Push(12);
-	sm.Push(11);
-	sm.Push(5555);
-	sm.ret();
-	cout << "Изымем элемент из очереди" << endl;
-	sm.Pop();
-	cout << "И пихнем еще один элемент в очередь" << endl;
-	sm.Push(6666);
-	sm.ret();
-
 	cout << "Теперь отработаем с шаблоном очереди\n\n\n" << endl;
 	Ochered_na_osnove_massiva_abs<double> shabl;
 	cout << "!!!!" << endl;
@@ -30,6 +17,15 @@ int main()
 	shabl.Push(9);
 	shabl.ret();
 
+	system("Pause");
+
+	Ciklicheskaya_och<int> *aaa;
+	Ciklicheskaya_och<int> bbb(1);
+	aaa = bbb.init(100);
+	aaa->Push1(aaa, 23);
+	aaa->Push1(aaa, 11);
+	aaa->Push1(aaa, 880553535);
+	aaa->rec(aaa);
 	system("Pause");
 	return 0;
 }

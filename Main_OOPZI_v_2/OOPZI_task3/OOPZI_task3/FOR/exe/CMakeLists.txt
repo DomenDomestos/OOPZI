@@ -3,6 +3,6 @@
 #
 
 # Добавьте источник в исполняемый файл этого проекта.
-add_executable (exe "MAIN.c")
-target_link_libraries(exe tlib)
+add_executable (task3_FOR "MAIN.c")
+target_link_libraries(task3_FOR task3_FORtlib)
 # TODO: Добавьте тесты и целевые объекты, если это необходимо.
