@@ -30,9 +30,13 @@ double th(Complex z1)
 
 ostream &operator<<(ostream &stream, const Complex &instance)
 {
-	if (instance.Im >= 0)
+	if (instance.Im > 0)
 	{
 		stream << instance.Re << " + " << instance.Im << "i";
+	}
+	else if (instance.Im == 0)
+	{
+		stream << instance.Re;
 	}
 	else
 	{

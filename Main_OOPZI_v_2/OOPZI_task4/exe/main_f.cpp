@@ -21,7 +21,7 @@ int main()
 	cin >> a >> b;
 	Complex h(a, b);
 	cout << "\nРезультат работы функции y(z)=1-Z^5-th(z/2)\n";
-	cout << y(h)<<"\n";
+	cout << "y(" << h << ") = " << y(h) << "\n";
 	system("pause");
 	return 0;
 }
