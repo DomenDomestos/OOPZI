@@ -20,12 +20,16 @@ int main()
 	system("Pause");
 
 	Ciklicheskaya_och<int> *aaa;
-	Ciklicheskaya_och<int> bbb(1);
+	Ciklicheskaya_och<int> bbb;
+	Ciklicheskaya_och<int> *ccc;
 	aaa = bbb.init(100);
 	aaa->Push1(aaa, 23);
 	aaa->Push1(aaa, 11);
 	aaa->Push1(aaa, 880553535);
 	aaa->rec(aaa);
+	ccc = aaa;
+	ccc->operator=(*aaa);
+	delete(aaa);
 	system("Pause");
 	return 0;
 }

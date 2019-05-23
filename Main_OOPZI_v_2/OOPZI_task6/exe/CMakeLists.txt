@@ -4,5 +4,5 @@
 
 # Добавьте источник в исполняемый файл этого проекта.
 add_executable (lab6 "task_main.cpp")
-target_link_libraries(lab6 lab6LIB_int_data)
+target_link_libraries(lab6 LIB_int_data)
 # TODO: Добавьте тесты и целевые объекты, если это необходимо.

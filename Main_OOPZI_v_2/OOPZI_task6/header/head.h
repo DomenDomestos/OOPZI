@@ -140,10 +140,16 @@ class Ciklicheskaya_och :public Base_class<ALL_DATA>
 	Ciklicheskaya_och *prev;
 
 public:
-	Ciklicheskaya_och(ALL_DATA a)
+	
+	Ciklicheskaya_och():next(NULL), prev(NULL) {};
+	~Ciklicheskaya_och()
 	{
-		field = a;
+		next = new Ciklicheskaya_och;
+		prev = new Ciklicheskaya_och;
+		free(next); 
+		free(prev);
 	}
+	/*Ciklicheskaya_och<ALL_DATA> operator=(const Ciklicheskaya_och<ALL_DATA>  &a);*/
 	class Ciklicheskaya_och * init(ALL_DATA a)  // а- значение первого узла
 	{
 		class Ciklicheskaya_och *lst;
@@ -176,7 +182,11 @@ public:
 	{
 		return field;
 	}
+	/*
+		В общем, так и так, ниже у нас уже очередь на основе двунаправленного списка
 
+		Надобно доделать копирование и перенос
+	*/
 
 	class Ciklicheskaya_och * Push1(Ciklicheskaya_och *lst, ALL_DATA number)
 	{
@@ -218,6 +228,26 @@ public:
 			printf("%d ", p->field); // вывод значения элемента p
 		} while (p != lst); // условие окончания обхода
 	}
-
 };
-
+//template < typename ALL_DATA >
+//Ciklicheskaya_och<ALL_DATA> Ciklicheskaya_och<ALL_DATA>:: operator=
+//(const Ciklicheskaya_och& right)
+//{
+//	//проверка на самоприсваивание
+//	if (this == &right) {
+//		return *this;
+//	}
+//	field = right.field;
+//
+//	class Ciklicheskaya_och *p, d,*d1;
+//	//d = new Ciklicheskaya_och;
+//	d.init(field);
+//	p = right;
+//	d1 = d;
+//	do {
+//		d.Push1(d1,p->field);
+//		p = p->next; // переход к следующему узлу
+//	} while (p != &right); // условие окончания обхода
+//	
+//	return *this;
+//}
